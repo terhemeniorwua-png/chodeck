@@ -73,11 +73,11 @@ function WhatsOnDeck() {
   return (
     <section className="container mt-16 lg:mt-28">
       <div className="flex flex-col items-center text-center">
-        <p className="section-title">What&rsquo;s on Deck?</p>
-        <p className="mt-4 text-base md:text-xl text-gray-600">
+        <p className="section-title" data-aos="fade-up">What&rsquo;s on Deck?</p>
+        <p className="mt-4 text-base md:text-xl text-gray-600" data-aos="fade-up" data-aos-delay="100">
           Try the everything app.
         </p>
-        <div className="mt-7 flex flex-col sm:flex-row gap-3">
+        <div className="mt-7 flex flex-col sm:flex-row gap-3" data-aos="fade-up" data-aos-delay="200">
           <DownloadBtn
             label="Download on Google Play"
             href="https://play.google.com/store/apps/details?id=com.chowdeck.com"
@@ -91,7 +91,7 @@ function WhatsOnDeck() {
         </div>
       </div>
 
-      <div className="relative mt-10 md:mt-16 max-w-4xl mx-auto">
+      <div className="relative mt-10 md:mt-16 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">
         <div className="relative h-[280px] md:h-[420px]">
           {onDeck.map((item, i) => {
             let state = 'rest'
@@ -122,7 +122,7 @@ function WhatsOnDeck() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-3 mt-8">
+        <div className="flex items-center justify-center gap-3 mt-8" data-aos="fade-up" data-aos-delay="400">
           {onDeck.map((item, i) => (
             <button
               key={item.name}

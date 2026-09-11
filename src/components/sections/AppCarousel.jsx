@@ -69,7 +69,7 @@ function AppCarousel() {
   return (
     <section className="relative overflow-hidden">
       <div className="container">
-        <div className="fixed-height h-[400px] md:h-[700px]">
+        <div className="h-[400px] md:h-[700px]">
           <div
             className="relative h-full w-full rounded-2xl py-4 px-4 md:p-8 flex flex-col"
             style={{ backgroundColor: slide.bg }}

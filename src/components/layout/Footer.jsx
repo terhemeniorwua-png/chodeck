@@ -139,7 +139,7 @@ const linkColumns = [
 function LinkColumn({ column, index }) {
   const [open, setOpen] = useState(column.open ?? false)
   return (
-    <div className="flex items-start lg:block mb-20 lg:mb-0 lg:pl-4 lg:py-16 border-b border-white/20 lg:border-b-0 ${index % 2 !== 0 ? 'lg:border-x lg:border-white/20' : ''}">
+    <div className={`flex items-start lg:block mb-20 lg:mb-0 lg:pl-4 lg:py-16 border-b border-white/20 lg:border-b-0 ${index % 2 !== 0 ? 'lg:border-x lg:border-white/20' : ''}`}>
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}

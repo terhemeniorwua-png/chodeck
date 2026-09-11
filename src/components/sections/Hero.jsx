@@ -6,7 +6,7 @@ const phrases = ['You don chow?', 'Se o ti jeun?', 'I riela nri?', 'Kun ci abinc
 
 function HeroBackground() {
   return (
-    <div className="hero-player-anim absolute -top-8 -left-18 h-[80vh] w-[270%] md:top-[-16rem] md:left-0 md:h-[100vh] md:w-full lg:top-[-2.5rem] xl:h-[75vw]">
+    <div className="hero-player-anim absolute -top-10 -left-18 h-[80vh] w-[270%] md:left-0 md:h-[100vh] md:w-full xl:h-[75vw]">
       <Lottie src="/animations/Website.json" loop autoplay className="w-full h-full" />
     </div>
   )
@@ -38,12 +38,12 @@ function Hero() {
   const [address, setAddress] = useState('')
 
   return (
-    <section className="relative w-full h-[65vh] md:h-[53vh] lg:h-[53vh] xl:h-[67.7vw] min-h-[520px] overflow-hidden">
+    <section className="relative w-full h-[65vh] md:h-[53vh]h-[53vh] xl:h-[67.7vw] min-h-[520px] overflow-hidden">
       <div className="hero-bg-fade absolute inset-0 z-10" />
       <HeroBackground />
 
       <div className="relative z-30">
-        <div className="pt-32 lg:mt-12 2xl:mt-24 text-center container">
+        <div className="pt-[12em] text-center container">
           <RotatingPhrase />
           <div className="relative w-full max-w-2xl mx-auto">
             <div className="w-full text-left my-8 rounded-full">

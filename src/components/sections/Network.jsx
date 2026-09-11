@@ -8,6 +8,7 @@ const cards = [
     image: '/illustrations/for-vendors.png',
     alt: 'Start selling',
     icon: <Sparkle className="text-jollof" />,
+    delay: '0',
   },
   {
     title: 'Deliver happiness',
@@ -16,6 +17,7 @@ const cards = [
     image: '/illustrations/for-riders.png',
     alt: 'Deliver happiness',
     icon: <StarBurst className="text-kiwi" size={40} />,
+    delay: '300',
   },
   {
     title: 'Behind the scenes',
@@ -24,12 +26,13 @@ const cards = [
     image: '/illustrations/behind-the-scenes.png',
     alt: 'Behind the scenes',
     icon: <Sparkle className="text-onion" size={40} />,
+    delay: '600',
   },
 ]
 
-function NetworkCard({ title, copy, href, image, icon, alt }) {
+function NetworkCard({ title, copy, href, image, icon, alt, delay }) {
   return (
-    <div className="border-4 border-black rounded-2xl overflow-hidden group transition-transform duration-200 hover:-translate-y-1 hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)]">
+    <div data-aos="fade-up" data-aos-delay={delay} className="border-4 border-black rounded-2xl overflow-hidden group transition-transform duration-200 hover:-translate-y-1 hover:shadow-[6px_6px_0_0_rgba(0,0,0,1)]">
       <div className="p-6 h-[290px] flex flex-col">
         <span className="mb-4 h-8 flex items-center">{icon}</span>
         <p className="font-bold text-xl mb-5 lg:text-[28px] -tracking-[1px]">{title}</p>
@@ -49,7 +52,7 @@ function NetworkCard({ title, copy, href, image, icon, alt }) {
 function Network() {
   return (
     <div className="container my-8">
-      <p className="text-gray-300 section-title w-full flex justify-center items-center mb-10">
+      <p className="text-gray-300 section-title w-full flex justify-center items-center mb-10" data-aos="fade-up">
         <span className="font-normal">Join our growing network</span>
         <ArrowDown className="ml-1 md:text-6xl" />
       </p>

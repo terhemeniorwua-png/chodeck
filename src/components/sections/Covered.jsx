@@ -67,20 +67,32 @@ function Covered() {
         </div>
       </div>
 
-      <div className="flex overflow-hidden will-change-transform mt-20" aria-label="Features marquee">
-        <div className="flex whitespace-nowrap animate-marquee">
-          {[...tips, ...tips, ...tips].map((tip, i) => (
-            <Tip key={i} tip={tip} />
-          ))}
+      <div className="overflow-hidden mt-20" aria-label="Features marquee">
+        <div className="flex animate-marquee w-max">
+          <div className="flex whitespace-nowrap">
+            {tips.map((tip, i) => (
+              <Tip key={i} tip={tip} />
+            ))}
+          </div>
+          <div className="flex whitespace-nowrap" aria-hidden="true">
+            {tips.map((tip, i) => (
+              <Tip key={`dup-${i}`} tip={tip} />
+            ))}
+          </div>
         </div>
       </div>
 
       <div className="pt-20">
-        <div className="flex overflow-hidden will-change-transform pb-16">
-          <div className="flex animate-marquee">
-            {[0, 1, 2].map((copy) => (
-              <NotificationRow key={copy} reverse={copy % 2 === 1} />
-            ))}
+        <div className="overflow-hidden pb-16">
+          <div className="flex animate-marquee w-max">
+            <NotificationRow reverse={false} />
+            <NotificationRow reverse={true} />
+            <div aria-hidden="true">
+              <NotificationRow reverse={false} />
+            </div>
+            <div aria-hidden="true">
+              <NotificationRow reverse={true} />
+            </div>
           </div>
         </div>
       </div>
